@@ -16,9 +16,9 @@ case class DefiniteIntegral(lower: Rational, upper: Rational, integrand: Polynom
   /** some F such that F' = F, if such a function exists */
   lazy val antiDer: Polynomial[Rational] = integrand.integral
 
-  lazy val upperAntiDir: Rational = antiDer(upper)
+  lazy val upperAntiDer: Rational = antiDer(upper)
 
-  lazy val lowerAntiDIr: Rational = antiDer(lower)
+  lazy val lowerAntiDer: Rational = antiDer(lower)
 
   /** F(b) - F(a), by the fundamental theorem of calculus */
-  lazy val result: Rational = upperAntiDir - lowerAntiDIr
+  lazy val result: Rational = upperAntiDer - lowerAntiDer
