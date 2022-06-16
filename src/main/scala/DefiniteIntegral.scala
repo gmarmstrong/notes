@@ -22,3 +22,5 @@ case class DefiniteIntegral(lower: Rational, upper: Rational, integrand: Polynom
 
   /** F(b) - F(a), by the fundamental theorem of calculus */
   lazy val result: Rational = upperAntiDer - lowerAntiDer
+
+  override def toString: String = s"DefiniteIntegral($lower, $upper, $integrand, $step)"
